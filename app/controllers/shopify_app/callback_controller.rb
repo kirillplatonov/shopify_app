@@ -129,7 +129,7 @@ module ShopifyApp
     end
 
     def access_scopes
-      return unless auth_hash['extra']['scope']
+      return unless auth_hash.dig('extra', 'scope')
       auth_hash['extra']['scope']
     end
 
